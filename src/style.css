@@ -1,0 +1,69 @@
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    box-sizing: border-box;
+    color:white;
+}
+#content{
+    width:100%;
+    height:100%;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: .125fr 1fr;
+}
+/*header + contents */
+.header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem;
+    grid-column: 1 / 4;
+    grid-row: 1 / 1;
+    background-color: rgb(53,77,92);
+}
+.nav{
+    display: flex;
+}
+.nav-logo{
+    font-size: 32px;
+}
+.menu-item{
+    font-size: 18px;
+    padding:0 1rem;
+}
+.book-now{
+    font-size: 18px;
+    display:flex;
+    align-items: center;
+    padding:1rem 4rem;
+    color:rgb(53,77,92);
+    background-color: rgb(217,217,217);
+    font-weight:700;
+}
+.book-now >img{
+    padding:0 0 0 .5rem;
+    width:15px;
+    opacity: .7;
+}
+/*hero + contents */
+.hero{
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    background-color: rgb(217,217,217);
+    background-image: url("/src/img/tacos.jpg");
+    background-size:cover;
+    background-position: center top;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.hero-logo{
+    font-size: 64px;
+    font-weight:700;
+}
+.hero-text{
+    text-align: center;
+    font-size: 32px;
+    font-weight:normal;
+}
