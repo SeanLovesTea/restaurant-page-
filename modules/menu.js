@@ -1,6 +1,11 @@
 function createMenu(){
+
+    const hero = document.createElement('div.');
+    hero.classList.add('hero');
+
     const container = document.createElement('div');
     container.classList.add('container');
+    hero.appendChild(container);
 
     const lineTop = document.createElement('div');
     lineTop.classList.add('darkline');
@@ -22,7 +27,7 @@ function createMenu(){
         ["Chicken Taco1", "£8.50", `url("/src/img/tacos.jpg")`],
         ["Chicken Taco2", "£8.50", `url("/src/img/tacos.jpg")`],
         ["Chicken Taco3", "£8.50", `url("/src/img/tacos.jpg")`],
-        ["Chicken Taco4", "£8.50", `url("/src/img/tacos.jpg")`],
+        ["Tasty Calendar", "£21.99", `url("/src/img/calendar.svg")`],
         ["Chicken Taco5", "£8.50", `url("/src/img/tacos.jpg")`],
         ["Chicken Taco6", "£8.50", `url("/src/img/tacos.jpg")`],
         ["Chicken Taco7", "£8.50", `url("/src/img/tacos.jpg")`],
@@ -64,83 +69,16 @@ function createMenu(){
     container.appendChild(btns);
 
     const menu_BTN = document.createElement('button');
-    container.appendChild(menu_BTN);
+    menu_BTN.innerHTML = 'Menu';
+    btns.appendChild(menu_BTN);
 
     const wine_BTN = document.createElement('button');
-    container.appendChild(wine_BTN);
+    wine_BTN.innerHTML = 'Wine List';
+    btns.appendChild(wine_BTN);
     
-    return container;
+    return hero;
 
 }
 export default createMenu;
 
-   // const menuCards = document.createElement('div');
-    // menuCards.classList.add('menu-cards');
-    // menu.appendChild(menuCards);
-
-    // const image = document.createElement('div');
-    // image.classList.add('image');
-    // menuCards.appendChild(image);
-
-    // const title = document.createElement('div');
-    // title.classList.add('title');
-    // menuCards.appendChild(title);
-
-    // const price = document.createElement('div');
-    // price.classList.add('price');
-    // menuCards.appendChild(price);
-
-// <!-- <div class="container">
-            
-//              <div class="darkline"></div>
-//             <div class="darkline-Bot"></div>
-//             <div class="menu">
-//                 <h1>Menu</h1>
-//                 <div class="menu-cards">
-//                     <div class="image"></div>
-//                     <div class="title">Taco Chicken</div>
-//                     <div class="price">£8.50</div>
-//                 </div>
-//                 <div class="menu-cards">
-//                     <div class="image"></div>
-//                     <div class="title">Taco Chicken</div>
-//                     <div class="price">£8.50</div>
-//                 </div>
-//                 <div class="menu-cards">
-//                     <div class="image"></div>
-//                     <div class="title">Taco Chicken</div>
-//                     <div class="price">£8.50</div>
-//                 </div>
-//                 <div class="menu-cards">
-//                     <div class="image"></div>
-//                     <div class="title">Taco Chicken</div>
-//                     <div class="price">£8.50</div>
-//                 </div>
-//                 <div class="menu-cards">
-//                     <div class="image"></div>
-//                     <div class="title">Taco Chicken</div>
-//                     <div class="price">£8.50</div>
-//                 </div>
-//                 <div class="menu-cards">
-//                     <div class="image"></div>
-//                     <div class="title">Taco Chicken</div>
-//                     <div class="price">£8.50</div>
-//                 </div>
-//                 <div class="menu-cards">
-//                     <div class="image"></div>
-//                     <div class="title">Taco Chicken</div>
-//                     <div class="price">£8.50</div>
-                    
-//                 </div>
-//                 <div class="menu-cards">
-//                     <div class="image"></div>
-//                     <div class="title">Taco Chicken</div>
-//                     <div class="price">£8.50</div>
-//                 </div>
-//             </div>
-//             <div class="btns">
-//                 <button>Menu</button>
-//                 <button>Wine List</button>
-//             </div>
-            
-//         </div> -->
+  

@@ -11,13 +11,21 @@ function createHeader(){
     nav.classList.add('nav');
     header.appendChild(nav);
 
+    const homeBTN = document.createElement('div');
+    homeBTN.classList.add('menu-item');
+    homeBTN.setAttribute('id','homeBTN')
+    homeBTN.innerHTML = `Home`;
+    nav.appendChild(homeBTN);
+
     const menu = document.createElement('div');
     menu.classList.add('menu-item');
+    menu.setAttribute('id','menuBTN');
     menu.innerHTML = `Menu`;
     nav.appendChild(menu);
 
     const contact = document.createElement('div');
     contact.classList.add('menu-item');
+    contact.setAttribute('id','contactBTN');
     contact.innerHTML = `Contact`;
     nav.appendChild(contact);
 

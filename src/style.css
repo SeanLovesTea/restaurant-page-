@@ -4,6 +4,7 @@ body{
     height:100vh;
     box-sizing: border-box;
     color:white;
+    /* overflow-y: hidden; */
 }
 #content{
     width:100%;
@@ -14,6 +15,7 @@ body{
 }
 /*header + contents */
 .header{
+    height:4rem;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -27,10 +29,12 @@ body{
 }
 .nav-logo{
     font-size: 32px;
+    cursor: pointer;
 }
 .menu-item{
-    font-size: 18px;
+    font-size: 24px;
     padding:0 1rem;
+    cursor: pointer;
 }
 .book-now{
     font-size: 18px;
@@ -40,6 +44,7 @@ body{
     color:rgb(53,77,92);
     background-color: rgb(217,217,217);
     font-weight:700;
+    cursor: pointer;
 }
 .book-now >img{
     padding:0 0 0 .5rem;
@@ -66,4 +71,140 @@ body{
     text-align: center;
     font-size: 32px;
     font-weight:normal;
+}
+/*menu */
+
+.container{
+    width:70%;
+    background-color:rgb(217,217,217);
+    position: relative;
+    margin: 2rem 0;
+}
+.menu{
+    background-color:rgb(217,217,217);
+    width: 80%;
+    max-width: 1240px;
+    display:grid;
+    margin:6rem auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    position: relative;
+    z-index: 3;
+}
+
+.menu-cards{
+    height:20rem;
+    background-color: whitesmoke;
+    margin:1rem;
+    padding:6px;
+    color:rgb(43, 42, 42);
+    text-align: center;
+    cursor: pointer;
+}
+.image{
+    width: 100%;
+    height:70%;
+    background-color: blue;
+    background-image: url("/src/img/tacos.jpg");
+    background-size: cover;  
+}
+.title{
+    padding:1rem;
+    font-size: 1.5rem;
+    font-weight:600;
+}
+.darkline, .darkline-Bot{
+    width:100%;
+    position: absolute;
+    height:2px;
+    background-color: rgb(88, 86, 86);
+    top:30%;
+    z-index:1;
+}
+.darkline-Bot{
+    top:70%;
+}
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 4rem 0;
+}
+.btns > button{
+    width:12rem;
+    padding:12px 0;
+    margin:0 2rem;
+    background-color:rgb(53,77,92) ;
+    color:rgb(217,217,217);
+    font-size: 1rem;
+    cursor: pointer;
+}
+.menu >h1{
+    position: absolute;
+    color:rgb(53,77,92);
+    bottom:100%;
+    /* font-size: 3rem; */
+}
+
+/*contact page  ^*/ 
+.contact-menu{
+    display:flex;
+    flex-direction: column;
+    max-width: 1240px;
+    height:60vh;
+    position: relative;
+    z-index: 3;
+    align-items: center;
+    padding:2rem;
+    color:rgb(53,77,92);
+    
+}
+.flexbox{
+    display:flex;
+    align-items: center;
+    width:100%;
+    height:100%;
+}
+.left, .right{
+    width:25%;
+    margin:2rem;
+}
+.map-img{
+    display:grid;
+    min-width:400px;
+    width:100%;
+    height:100%;
+    background-image: url("./img/map.png");
+    background-size: cover;
+    grid-column: 2 / 3;
+    
+}
+.contact-menu > h1,.contact-menu > h2{
+    margin:2rem;
+    width:25%;
+}
+@media screen and (max-width: 1150px) {
+    .contact-menu{
+        padding:0;
+        overflow: hidden;
+        height:100%;
+    }
+    .flexbox{
+        display: flex;
+        flex-direction: column;
+    }
+    .map-img{
+        width:400px;
+        height:400px;
+    }
+    .left, .right{
+        text-align: center;
+        margin:0;
+        padding:.5rem;
+        height:auto;
+        width:auto;
+    }
+    .contact-menu > h1,.contact-menu > h2{
+        margin:0;
+        padding:0;
+    }
 }
